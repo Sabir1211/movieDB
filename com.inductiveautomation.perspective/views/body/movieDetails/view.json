@@ -1,0 +1,201 @@
+{
+  "custom": {
+    "castDetails": [
+      {
+        "params": {
+          "character": "José de los Santos",
+          "id": 4463729,
+          "imgPath": "default_image_url.jpg",
+          "original_name": "Jesús María Mina"
+        },
+        "viewPath": "New Folder/tmpMovieCastDetails"
+      },
+      {
+        "params": {
+          "character": "Pium-Pium",
+          "id": 4463730,
+          "imgPath": "default_image_url.jpg",
+          "original_name": "Julián Ramírez"
+        },
+        "viewPath": "New Folder/tmpMovieCastDetails"
+      },
+      {
+        "params": {
+          "character": "Teresa",
+          "id": 2480564,
+          "imgPath": "default_image_url.jpg",
+          "original_name": "Carol Hurtado"
+        },
+        "viewPath": "New Folder/tmpMovieCastDetails"
+      },
+      {
+        "params": {
+          "character": "Comandante",
+          "id": 1431632,
+          "imgPath": "default_image_url.jpg",
+          "original_name": "John Alex Castillo"
+        },
+        "viewPath": "New Folder/tmpMovieCastDetails"
+      }
+    ]
+  },
+  "params": {},
+  "propConfig": {
+    "custom.castDetails": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "320px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.params": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.movieDetails.params"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "New Folder/tmpMovieDetails"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "position": {
+              "basis": "320px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.bgPath": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.movieDetails.params.bgPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "New Folder/MoviePoster"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "lblHeading"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "style": {
+                "margin-left": "5px"
+              },
+              "text": "Cast",
+              "textStyle": {
+                "color": "whitesmoke",
+                "fontFamily": "Verdana",
+                "fontSize": "18px",
+                "fontWeight": "300",
+                "letterSpacing": "1px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "flxRepeaterCast"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.castDetails"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elementPosition": {
+                "grow": 0,
+                "shrink": 0
+              },
+              "elementStyle": {
+                "margin": "5px 5px 15px 5px"
+              },
+              "path": "New Folder/tmpMovieCast",
+              "wrap": "wrap"
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "system": {
+        "onStartup": {
+          "config": {
+            "script": "\tmovieID \u003d int(self.session.custom.id)\n\tself.session.custom.castDetails \u003d movieScript.apiCastDetails.apiMovieDetails(movieID)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "background-color": "black",
+        "height": "auto"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

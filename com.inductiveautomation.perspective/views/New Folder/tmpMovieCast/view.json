@@ -1,0 +1,131 @@
+{
+  "custom": {},
+  "params": {
+    "params": {
+      "character": "Jesús María Mina",
+      "id": "value",
+      "imgPath": "value",
+      "original_name": "value"
+    }
+  },
+  "propConfig": {
+    "params.params": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 345,
+      "width": 279
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "imgPoster"
+        },
+        "position": {
+          "basis": "",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.imgPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "style": {
+            "classes": "imgflex"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "lblName"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.original_name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "font-weight": "bold",
+            "fontFamily": "Verdana",
+            "letterSpacing": "1px",
+            "margin-left": "5px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lblCharacter"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.character"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn \"Character : \" + str(value)",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "fontFamily": "Verdana",
+            "letterSpacing": "1px",
+            "margin-left": "5px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-evenly",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

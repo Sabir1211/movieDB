@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {
+    "bgPath": "value"
+  },
+  "propConfig": {
+    "params.bgPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.bgPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          }
+        },
+        "type": "ia.display.image"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

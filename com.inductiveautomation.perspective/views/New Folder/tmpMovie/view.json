@@ -1,0 +1,139 @@
+{
+  "custom": {},
+  "params": {
+    "params": {
+      "id": "value",
+      "imgPath": "value",
+      "rate": "value",
+      "title": "value"
+    }
+  },
+  "propConfig": {
+    "params.params": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 345,
+      "width": 279
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "imgPoster"
+        },
+        "position": {
+          "basis": "",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.imgPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "style": {
+            "classes": "imgflex"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "lblTitle"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.title"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "font-weight": "bold",
+            "fontFamily": "Verdana",
+            "letterSpacing": "1px",
+            "margin-left": "5px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lblIMDBRating"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.params.rate"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn \"Rating : \" + str(value)",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "white",
+            "fontFamily": "Verdana",
+            "letterSpacing": "1px",
+            "margin-left": "5px",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\timport time\n\tself.session.custom.id \u003d self.view.params.params.id\n\tself.session.custom.moviePoster \u003d self.view.params.params.imgPath\n\tmovieID \u003d int(self.session.custom.id)\n\tself.session.custom.movieDetails \u003d {}\n\tself.session.custom.movieDetails \u003d movieScript.apiMovieDetails.apiMovieDetails(movieID)\n\ttime.sleep(0.3)\n#\tsystem.perspective.openPopup(\"movieDetails\", \"body/movieDetails\")\n\tsystem.perspective.navigate( page \u003d \"/movieDetails\")"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-evenly"
+    },
+    "type": "ia.container.flex"
+  }
+}

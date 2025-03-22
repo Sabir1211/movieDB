@@ -1,0 +1,253 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 91
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t\t# API URL and Headers\n\turl \u003d \"https://api.themoviedb.org/3/movie/popular?language\u003den-US\u0026page\u003d2\"\n\theaders \u003d {\n\t    \"accept\": \"application/json\",\n\t    \"Authorization\": \"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTcyMTU2ZDQ3YjllM2U0M2RhMjA0MDRhMDQwYzNhOCIsIm5iZiI6MTczNjIyMzM0My44MjksInN1YiI6IjY3N2NhYTZmZDEwMmU3NzZmNTc0ODhiYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nwAHnyYb8Ej1UCswTkltuNKZsCWWeknfHz_6Y0oi2es\"\n\t}\n\t\n\t# Create an HTTP client\n\thttp_client \u003d system.net.httpClient()\n\tresponse \u003d http_client.get(url, headers\u003dheaders)\n\t\n\t# Decode the JSON response\n\tresult \u003d system.util.jsonDecode(response.getText())\n\tmovies \u003d result.get(\"results\", [])\n\t\n\t# Get reference to the Flex Repeater\n\tflex_repeater \u003d self.getChild(\"FlexRepeater\")\n\t\n\t# Create instances list dynamically\n\tinstances \u003d []\n\tfor movie in movies:\n\t    instance \u003d {\n\t        \"viewPath\": \"New Folder/card3\",  # The path to your embedded view\n\t        \"params\": {\n\t            \"title\": movie.get(\"title\", \"Unknown Title\"),\n\t            \"imgPath\": \"https://image.tmdb.org/t/p/w500/\" + movie.get(\"poster_path\", \"\"),\n\t            \"rate\": movie.get(\"vote_average\", \"N/A\")\n\t        }\n\t    }\n\t    instances.append(instance)\n\t\n\t# Assign the instances to the Flex Repeater\n\tflex_repeater.props.instances \u003d instances\n\t\t\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": ""
+            },
+            "props": {
+              "text": "MovieDB"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "120px"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "space-around",
+          "style": {
+            "classes": "mheader1",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.session.custom.activePage \u003d 1\n\tself.session.custom.instances \u003d movieScript.apiPopular.apiPopular(1)\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "lblPopular"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.color": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.activePage"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003d\u003d 1:\n\t\treturn \"white\"\n\telse:\n\t\treturn \"rgb(119, 119, 119)\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "ml"
+              },
+              "text": "Popular"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.session.custom.activePage \u003d 2\n\tself.session.custom.instances \u003d movieScript.apiTopRated.apiTopRated(1)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "lblTopRated"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.color": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.activePage"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif int(value) \u003d\u003d 2:\n\t\treturn \"white\"\n\telse:\n\t\treturn \"rgb(119, 119, 119)\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "ml"
+              },
+              "text": "Top Rated"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.session.custom.activePage \u003d 3\n\tself.session.custom.instances \u003d movieScript.apiUpcoming.apiUpcoming(1)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "lblUpcoming"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.color": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.activePage"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif int(value) \u003d\u003d 3:\n\t\treturn \"white\"\n\telse:\n\t\treturn \"rgb(119, 119, 119)\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "ml"
+              },
+              "text": "Upcoming"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.activePage"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "placeholder": "Movie Name",
+              "style": {
+                "classes": "mt"
+              }
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "style": {
+                "classes": "mb"
+              },
+              "text": "Search"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": ""
+        },
+        "props": {
+          "alignItems": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-between",
+      "style": {
+        "background-color": "#3C3D37",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

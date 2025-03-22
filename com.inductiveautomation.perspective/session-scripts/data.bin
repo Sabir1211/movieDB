@@ -1,0 +1,1 @@
+{"onStartup":"\tself.session.custom.activePage = 1\n\tself.session.custom.instances = movieScript.apiPopular.apiPopular(1)","onBarcodeDataReceived":"\t","onBluetoothReceived":"\t","onAccelerometerDataReceived":"\t","onNdefDataReceived":"\t"}

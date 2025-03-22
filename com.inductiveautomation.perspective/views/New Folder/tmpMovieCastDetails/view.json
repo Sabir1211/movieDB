@@ -1,0 +1,69 @@
+{
+  "custom": {},
+  "params": {
+    "params": {
+      "bgPath": "value",
+      "genres": "value",
+      "id": "value",
+      "imgPath": "value",
+      "moviePoster": "value",
+      "original_title": "value",
+      "overview": "value",
+      "release_date": "12/13/2022",
+      "runtime": "value",
+      "vote_average": "value"
+    }
+  },
+  "propConfig": {
+    "params.params": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "lbl_Cast"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "style": {
+            "classes": "mdOverview"
+          },
+          "text": "Cast"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "path": "New Folder/tmpMovieCast"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-evenly"
+    },
+    "type": "ia.container.flex"
+  }
+}

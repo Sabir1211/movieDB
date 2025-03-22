@@ -1,0 +1,127 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "session.custom.instances"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elementStyle": {
+            "classes": "flexElement"
+          },
+          "path": "New Folder/tmpMovie",
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t#\tself.session.custom.pages \u003d 1\n\tif self.session.custom.pages !\u003d 9999:\n\t\t\t# API URL and Headers\n\t\tself.session.custom.pages +\u003d 1\n\t\tif self.session.custom.activePage \u003d\u003d 1: #popular\n\t\t\tself.session.custom.instances \u003d movieScript.apiPopular.apiPopular(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 2: #top rated\n\t\t\tself.session.custom.instances \u003d movieScript.apiTopRated.apiTopRated(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 3: #upcoming\n\t\t\tself.session.custom.instances \u003d movieScript.apiUpcoming.apiUpcoming(self.session.custom.pages)\n\telse:\n\t\tpass\n\t\t\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Next"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "NumericEntryField"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "type": "ia.input.numeric-entry-field"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "text": "Label"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t#\tself.session.custom.pages \u003d 1\n\tif self.session.custom.pages !\u003d 1:\n\t\tself.session.custom.pages -\u003d 1 #page decrement\n\t\tif self.session.custom.activePage \u003d\u003d 1: #popular\n\t\t\tself.session.custom.instances \u003d movieScript.apiPopular.apiPopular(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 2: #top rated\n\t\t\tself.session.custom.instances \u003d movieScript.apiTopRated.apiTopRated(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 3: #upcoming\n\t\t\tself.session.custom.instances \u003d movieScript.apiUpcoming.apiUpcoming(self.session.custom.pages)\n\telse:\n\t\tpass\n\t\t\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Previous"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "justify": "flex-end"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "background-color": "black"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

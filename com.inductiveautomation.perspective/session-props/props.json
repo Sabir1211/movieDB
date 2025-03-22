@@ -1,0 +1,299 @@
+{
+  "custom": {
+    "activePage": 2,
+    "castDetails": [
+      {
+        "params": {
+          "character": "José de los Santos",
+          "id": 4463729,
+          "imgPath": "https://image.tmdb.org/t/p/w500//1fkoO7DOqa0JU8CMaPUKPpzIqER.jpg",
+          "original_name": "Jesús María Mina"
+        }
+      },
+      {
+        "params": {
+          "character": "Pium-Pium",
+          "id": 4463730,
+          "imgPath": "default_image_url.jpg",
+          "original_name": "Julián Ramírez"
+        }
+      },
+      {
+        "params": {
+          "character": "Teresa",
+          "id": 2480564,
+          "imgPath": "https://image.tmdb.org/t/p/w500//fUkYBJSyJzbfcTNu2EPnFmk76nY.jpg",
+          "original_name": "Carol Hurtado"
+        }
+      },
+      {
+        "params": {
+          "character": "Comandante",
+          "id": 1431632,
+          "imgPath": "https://image.tmdb.org/t/p/w500//wuUuV8CWwiRgc7OUEwrvfKSdxcZ.jpg",
+          "original_name": "John Alex Castillo"
+        }
+      }
+    ],
+    "id": 970947,
+    "instances": [
+      {
+        "params": {
+          "id": 278,
+          "imgPath": "https://image.tmdb.org/t/p/w500//9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+          "rate": 8.708,
+          "title": "The Shawshank Redemption"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 238,
+          "imgPath": "https://image.tmdb.org/t/p/w500//3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+          "rate": 8.689,
+          "title": "The Godfather"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 240,
+          "imgPath": "https://image.tmdb.org/t/p/w500//hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+          "rate": 8.569,
+          "title": "The Godfather Part II"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 424,
+          "imgPath": "https://image.tmdb.org/t/p/w500//sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+          "rate": 8.567,
+          "title": "Schindler\u0027s List"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 389,
+          "imgPath": "https://image.tmdb.org/t/p/w500//ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg",
+          "rate": 8.5,
+          "title": "12 Angry Men"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 129,
+          "imgPath": "https://image.tmdb.org/t/p/w500//39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+          "rate": 8.538,
+          "title": "Spirited Away"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 19404,
+          "imgPath": "https://image.tmdb.org/t/p/w500//lfRkUr7DYdHldAqi3PwdQGBRBPM.jpg",
+          "rate": 8.5,
+          "title": "Dilwale Dulhania Le Jayenge"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 155,
+          "imgPath": "https://image.tmdb.org/t/p/w500//qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+          "rate": 8.519,
+          "title": "The Dark Knight"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 497,
+          "imgPath": "https://image.tmdb.org/t/p/w500//8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+          "rate": 8.505,
+          "title": "The Green Mile"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 496243,
+          "imgPath": "https://image.tmdb.org/t/p/w500//7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+          "rate": 8.501,
+          "title": "Parasite"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 680,
+          "imgPath": "https://image.tmdb.org/t/p/w500//vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+          "rate": 8.489,
+          "title": "Pulp Fiction"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 1356039,
+          "imgPath": "https://image.tmdb.org/t/p/w500//lI2uFlSEkwXKljqiry7coaJ6wIS.jpg",
+          "rate": 8.493,
+          "title": "Counterattack"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 372058,
+          "imgPath": "https://image.tmdb.org/t/p/w500//q719jXXEzOoYaps6babgKnONONX.jpg",
+          "rate": 8.485,
+          "title": "Your Name."
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 122,
+          "imgPath": "https://image.tmdb.org/t/p/w500//rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+          "rate": 8.48,
+          "title": "The Lord of the Rings: The Return of the King"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 13,
+          "imgPath": "https://image.tmdb.org/t/p/w500//arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+          "rate": 8.467,
+          "title": "Forrest Gump"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 429,
+          "imgPath": "https://image.tmdb.org/t/p/w500//bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+          "rate": 8.462,
+          "title": "The Good, the Bad and the Ugly"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 346,
+          "imgPath": "https://image.tmdb.org/t/p/w500//8OKmBV5BUFzmozIC3pPWKHy17kx.jpg",
+          "rate": 8.457,
+          "title": "Seven Samurai"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 769,
+          "imgPath": "https://image.tmdb.org/t/p/w500//aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+          "rate": 8.457,
+          "title": "GoodFellas"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 157336,
+          "imgPath": "https://image.tmdb.org/t/p/w500//gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+          "rate": 8.452,
+          "title": "Interstellar"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "params": {
+          "id": 12477,
+          "imgPath": "https://image.tmdb.org/t/p/w500//k9tv1rXZbOhH7eiCk378x61kNQ1.jpg",
+          "rate": 8.451,
+          "title": "Grave of the Fireflies"
+        },
+        "viewPath": "New Folder/tmpMovie"
+      },
+      {
+        "total_pages": 503
+      }
+    ],
+    "movieDetails": {
+      "params": {
+        "bgPath": "https://image.tmdb.org/t/p/w500//kznpWswHtIQ3fXrRy8BVXede1KH.jpg",
+        "genres": "Drama, Science Fiction",
+        "id": 970947,
+        "imgPath": "https://image.tmdb.org/t/p/w500//kznpWswHtIQ3fXrRy8BVXede1KH.jpg",
+        "original_title": "The Shrouds",
+        "overview": "Inconsolable since the death of his wife, Karsh, a prominent businessman, invents a revolutionary and controversial technology that enables the living to monitor their dear departed in their shrouds. One night, multiple graves, including that of Karsh’s wife, are desecrated, and he sets out to track down the perpetrators.",
+        "release_date": "2025-03-20",
+        "runtime": 119,
+        "vote_average": 5.7
+      },
+      "viewPath": "New Folder/tmpMovieDetails"
+    },
+    "moviePoster": "https://image.tmdb.org/t/p/w500//2drOuzftQlkhsuHRPUaARmzCGQP.jpg",
+    "pages": 1
+  },
+  "propConfig": {
+    "props.auth": {
+      "access": "PRIVATE",
+      "persistent": false
+    },
+    "props.device.accelerometer": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.identifier": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.timezone": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.type": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.userAgent": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.gateway": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.data": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.permissionGranted": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.host": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.id": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.lastActivity": {
+      "access": "SYSTEM",
+      "persistent": false
+    }
+  },
+  "props": {
+    "address": "127.0.0.1",
+    "device": {},
+    "geolocation": {},
+    "locale": "en-IN",
+    "theme": "myTheme",
+    "timeZoneId": "Asia/Calcutta"
+  }
+}

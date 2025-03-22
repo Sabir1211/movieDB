@@ -1,0 +1,249 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "basis": "46px"
+            },
+            "props": {
+              "path": "material/insert_emoticon"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "90px"
+            },
+            "props": {
+              "text": "Emergency help"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "63px"
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "N1"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 1",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N2"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 2",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N3"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 3",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N4"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 4",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N5"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 5",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N6"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 6",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N7"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 7",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "N8"
+        },
+        "position": {
+          "basis": "49px"
+        },
+        "props": {
+          "params": {
+            "icon": "material/graphic_eq",
+            "isLink": true,
+            "label": "Data 8",
+            "showArrow": false,
+            "target": "/"
+          },
+          "path": "New Folder/N1",
+          "style": {
+            "margin-bottom": "2px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#213555",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

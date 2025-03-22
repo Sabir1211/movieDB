@@ -1,0 +1,13 @@
+{
+  "base": {
+    "style": {
+      "color": "whitesmoke",
+      "fontFamily": "Roboto",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "letterSpacing": "1px",
+      "marginLeft": "5px",
+      "textAlign": "start"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "id": "sidenav",
+                    "type": "toggle"
+                  },
+                  "scope": "C",
+                  "type": "dock"
+                }
+              }
+            },
+            "meta": {
+              "name": "logoIcon"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "fit": {
+                "mode": "fill"
+              },
+              "source": "/system/images/process_9901933.png"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "text": "Test Company"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "295px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "pages"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "path": "material/pages"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "notification"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "path": "material/notifications"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "settings"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "path": "material/settings"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "userName"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "text": "Sabir"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "userIcon"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "path": "material/supervised_user_circle"
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-between",
+      "style": {
+        "backgroundColor": "#213555",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

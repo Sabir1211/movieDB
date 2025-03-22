@@ -1,0 +1,150 @@
+{
+  "custom": {
+    "key": ""
+  },
+  "params": {
+    "icon": "material/insert_emoticon",
+    "isLink": true,
+    "label": "Val",
+    "showArrow": false,
+    "target": "value"
+  },
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "expression": "{page.props.path}"
+        },
+        "transforms": [
+          {
+            "code": "\tif not self.view.params.isLink:\n\t\treturn \" not-a-Link\"\n\telif value \u003d\u003d self.view.params.target:\n\t\treturn \" selected\"\n\telif value.split(\"/\")[1] \u003d\u003d self.view.params.label.lower().replace(\" \", \"-\"):\n\t\treturn \" selected-parent\"\n\telse:\n\t\treturn \"\"",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.icon": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.isLink": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.showArrow": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.target": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 51,
+      "width": 195
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "31px"
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.icon"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "105px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          },
+          "textStyle": {
+            "whiteSpace": "pre-wrap"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Arrow"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.showArrow"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/arrow_right",
+          "style": {
+            "padding": "8px"
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "config": {
+            "expression": "concat(\"N1\", \r\n{view.custom.key}\r\n)"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "justify": "space-around",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

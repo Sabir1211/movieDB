@@ -1,0 +1,74 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 39
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "#\tself.session.custom.pages \u003d 1\n\tif self.session.custom.pages !\u003d 1:\n\t\tself.session.custom.pages -\u003d 1 #page decrement\n\t\tif self.session.custom.activePage \u003d\u003d 1: #popular\n\t\t\tself.session.custom.instances \u003d movieScript.apiPopular.apiPopular(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 2: #top rated\n\t\t\tself.session.custom.instances \u003d movieScript.apiTopRated.apiTopRated(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 3: #upcoming\n\t\t\tself.session.custom.instances \u003d movieScript.apiUpcoming.apiUpcoming(self.session.custom.pages)\n\telse:\n\t\tpass\n\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "path": "material/keyboard_arrow_left",
+          "style": {
+            "color": "#FFFFFF"
+          }
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "#\tself.session.custom.pages \u003d 1\n\tif self.session.custom.pages !\u003d 9999:\n\t\t\t# API URL and Headers\n\t\tself.session.custom.pages +\u003d 1\n\t\tif self.session.custom.activePage \u003d\u003d 1: #popular\n\t\t\tself.session.custom.instances \u003d movieScript.apiPopular.apiPopular(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 2: #top rated\n\t\t\tself.session.custom.instances \u003d movieScript.apiTopRated.apiTopRated(self.session.custom.pages)\n\t\telif self.session.custom.activePage \u003d\u003d 3: #upcoming\n\t\t\tself.session.custom.instances \u003d movieScript.apiUpcoming.apiUpcoming(self.session.custom.pages)\n\telse:\n\t\tpass\n\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon_0"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "path": "material/keyboard_arrow_right",
+          "style": {
+            "color": "#FFFFFF"
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#3C3D37"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}
